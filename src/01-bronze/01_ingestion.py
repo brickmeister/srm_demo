@@ -49,7 +49,8 @@
 # MAGIC
 # MAGIC # source file
 # MAGIC _raw_files = ["https://raw.githubusercontent.com/tredenceofficial/OSA-Data/main/osa_raw_data.csv",
-# MAGIC               "https://raw.githubusercontent.com/tredenceofficial/OSA-Data/main/vendor_leadtime_info.csv"]
+# MAGIC               "https://raw.githubusercontent.com/tredenceofficial/OSA-Data/main/vendor_leadtime_info.csv",
+# MAGIC               "https://https://raw.githubusercontent.com/brickmeister/srm_demo/main/data/dim_sku.csv"]
 # MAGIC
 # MAGIC # retrieve files
 # MAGIC for _raw_file in _raw_files:
@@ -99,6 +100,11 @@
 # MAGIC                   .withColumn("date", to_timestamp(col("date").cast(StringType()), "yyyyMMdd"))
 # MAGIC                   .withColumn("supplier_id", col("store_id"))
 # MAGIC                   .drop(col("store_id")))
+# MAGIC     elif _out_file = "dbfs:/tmp/dim_sku.csv":
+# MAGIC       _df = (spark.read.format("csv")
+# MAGIC                   .option("header", True)
+# MAGIC                   .option("inferSchema", True)
+# MAGIC                   .load(_out_file)
 # MAGIC     else:
 # MAGIC       _df = (spark.read.format("csv")
 # MAGIC             .option("header", True)
