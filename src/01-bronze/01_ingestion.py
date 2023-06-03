@@ -50,7 +50,7 @@
 # MAGIC # source file
 # MAGIC _raw_files = ["https://raw.githubusercontent.com/tredenceofficial/OSA-Data/main/osa_raw_data.csv",
 # MAGIC               "https://raw.githubusercontent.com/tredenceofficial/OSA-Data/main/vendor_leadtime_info.csv",
-# MAGIC               "https://https://raw.githubusercontent.com/brickmeister/srm_demo/main/data/dim_sku.csv"]
+# MAGIC               "https://raw.githubusercontent.com/brickmeister/srm_demo/main/data/dim_sku.csv"]
 # MAGIC
 # MAGIC # retrieve files
 # MAGIC for _raw_file in _raw_files:
