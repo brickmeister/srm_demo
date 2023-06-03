@@ -91,6 +91,8 @@
 # MAGIC Write out networked DIM_SKU data
 # MAGIC """
 # MAGIC
+# MAGIC from datetime import datetime
+# MAGIC
 # MAGIC try:
 # MAGIC   (_resolved_df.write.format("delta")
 # MAGIC                     .mode("append")
