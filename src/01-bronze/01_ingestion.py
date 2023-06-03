@@ -104,7 +104,7 @@
 # MAGIC       _df = (spark.read.format("csv")
 # MAGIC                   .option("header", True)
 # MAGIC                   .option("inferSchema", True)
-# MAGIC                   .load(_out_file)
+# MAGIC                   .load(_out_file))
 # MAGIC     else:
 # MAGIC       _df = (spark.read.format("csv")
 # MAGIC             .option("header", True)
