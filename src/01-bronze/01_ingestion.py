@@ -100,7 +100,7 @@
 # MAGIC                   .withColumn("date", to_timestamp(col("date").cast(StringType()), "yyyyMMdd"))
 # MAGIC                   .withColumn("supplier_id", col("store_id"))
 # MAGIC                   .drop(col("store_id")))
-# MAGIC     elif _out_file = "dbfs:/tmp/dim_sku.csv":
+# MAGIC     elif _out_file == "dbfs:/tmp/dim_sku.csv":
 # MAGIC       _df = (spark.read.format("csv")
 # MAGIC                   .option("header", True)
 # MAGIC                   .option("inferSchema", True)
