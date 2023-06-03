@@ -95,7 +95,8 @@
 # MAGIC
 # MAGIC try:
 # MAGIC   (_resolved_df.write.format("delta")
-# MAGIC                     .mode("append")
+# MAGIC                     .mode("overwrite")
+# MAGIC                     .option("overwriteSchema", True)
 # MAGIC                     .saveAsTable(f"{catalog}.{silver}.DIM_SKU_EDGE"))
 # MAGIC except Exception as err:
 # MAGIC   raise ValueError(f"{str(datetime.now())} : Failed to write out networked table, err : {err}")
