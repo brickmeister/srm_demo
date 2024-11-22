@@ -1,18 +1,17 @@
 # Databricks notebook source
-# MAGIC %python
-# MAGIC
-# MAGIC """
-# MAGIC Configuration for demo
-# MAGIC """
-# MAGIC
-# MAGIC # unity catalog
-# MAGIC catalog = "SRM"
-# MAGIC # bronze database
-# MAGIC bronze = "bronze"
-# MAGIC # silver database
-# MAGIC silver = "silver"
-# MAGIC # gold database
-# MAGIC gold = "gold"
+
+"""
+Configuration for demo
+"""
+
+# unity catalog
+catalog = "SRM"
+# bronze database
+bronze = "bronze"
+# silver database
+silver = "silver"
+# gold database
+gold = "gold"
 
 # COMMAND ----------
 
@@ -22,15 +21,14 @@
 # MAGIC -- Turn on change data feeds
 # MAGIC --
 # MAGIC
-# MAGIC set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
+# MAGIC -- set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
 
 # COMMAND ----------
 
-# MAGIC %python
-# MAGIC
-# MAGIC """
-# MAGIC Programmatic values [DON'T CHANGE]
-# MAGIC """
-# MAGIC
-# MAGIC # easy export as array
-# MAGIC databases = [bronze, silver, gold]
+
+"""
+Programmatic values [DON'T CHANGE]
+"""
+
+# easy export as array
+databases = [bronze, silver, gold]
